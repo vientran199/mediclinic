@@ -1,0 +1,1 @@
+https://mediclinic.qodeinteractive.com/

@@ -1,0 +1,106 @@
+header {
+    width: 100vw;
+
+    .header-top {
+        padding: 18px 56px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+        &--logo {
+            height: 36px;
+        }
+
+        &--contact {
+            display: flex;
+
+            &--box {
+                padding: 0 20px;
+                display: flex;
+                gap: 20px;
+                .icon {
+                    color: #4e6dcc;
+                    font-size: 20px;
+                }
+            }
+
+            &--box:nth-child(2) {
+                border-left: 1px solid #eee;
+                border-right: 1px solid #eee;
+            }
+            &--box:last-child {
+                padding-right: 0px;
+            }
+
+            &__detail {
+                font-size: 13px;
+
+                span {
+                    display: block;
+                    font-weight: 400;
+                    color: #6e6e6e;
+                }
+
+                span:nth-child(1) {
+                    font-weight: 600;
+                    color: #333;
+                    margin-bottom: 3px;
+                }
+            }
+        }
+    }
+    .header-bottom{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 48px;
+        height: 50px;
+        nav{
+            padding: 0px !important;
+            ul{
+                position: relative;
+                // gap: 28px;
+                .line-bottom{
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    height: 4px;
+                    background-color: rgb(205, 205, 205);
+                    transition: width .4s,left .6s cubic-bezier(.19,.65,.02,.93);;
+                }
+            }
+            li.nav-item{
+                margin: 0px;
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+            }
+            li a{
+                padding-left: 21px  !important;
+                padding-right: 21px !important;
+            }
+        }
+        &--actions{
+            button{
+                border: none;
+                background-color: #fff;
+                color: #333;
+                font-size: 18px;
+                margin:0 12px;
+                position: relative;
+                &::before{
+                    content: attr(data-amount);
+                    position: absolute;
+                    top: -13%;
+                    right: -40%;
+                    color: #fff;
+                    background-color: #43d5cb;
+                    border-radius: 50%;
+                    font-size: 11px;
+                    line-height: 14px;
+                    padding: 0 4px;
+                }
+            }
+        }
+    }
+}

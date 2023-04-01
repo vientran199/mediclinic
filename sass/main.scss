@@ -1,0 +1,18 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'lato', sans-serif;
+    font-size: 16px; /*mặc đinh là 16px*/
+    color: #5a5a5a;
+    background-color: #ffffff;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+@import './header.scss';
