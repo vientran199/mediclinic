@@ -7,6 +7,7 @@ header {
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid #eee;
+
         &--logo {
             height: 36px;
         }
@@ -18,6 +19,7 @@ header {
                 padding: 0 20px;
                 display: flex;
                 gap: 20px;
+
                 .icon {
                     color: #4e6dcc;
                     font-size: 20px;
@@ -28,6 +30,7 @@ header {
                 border-left: 1px solid #eee;
                 border-right: 1px solid #eee;
             }
+
             &--box:last-child {
                 padding-right: 0px;
             }
@@ -49,46 +52,60 @@ header {
             }
         }
     }
-    .header-bottom{
+
+    .header-bottom {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         padding: 0px 48px;
         height: 50px;
-        nav{
+
+        nav {
             padding: 0px !important;
-            ul{
+
+            ul {
                 position: relative;
+
                 // gap: 28px;
-                .line-bottom{
+                .line-bottom {
                     position: absolute;
                     left: 0;
                     bottom: 0;
                     height: 4px;
                     background-color: rgb(205, 205, 205);
-                    transition: width .4s,left .6s cubic-bezier(.19,.65,.02,.93);;
+                    transition: width .4s, left .6s cubic-bezier(.19, .65, .02, .93);
                 }
             }
-            li.nav-item{
+
+            li.nav-item {
                 margin: 0px;
                 border-top: 5px solid transparent;
                 border-bottom: 5px solid transparent;
+                position: relative;
+
+                &:hover .second {
+                    opacity: 1;
+                    visibility: visible;
+                }
             }
-            li a{
-                padding-left: 21px  !important;
+
+            li a {
+                padding-left: 21px !important;
                 padding-right: 21px !important;
             }
         }
-        &--actions{
-            button{
+
+        &--actions {
+            button {
                 border: none;
                 background-color: #fff;
                 color: #333;
                 font-size: 18px;
-                margin:0 12px;
+                margin: 0 12px;
                 position: relative;
-                &::before{
+
+                &::before {
                     content: attr(data-amount);
                     position: absolute;
                     top: -13%;
@@ -99,6 +116,42 @@ header {
                     font-size: 11px;
                     line-height: 14px;
                     padding: 0 4px;
+                }
+            }
+        }
+    }
+}
+
+.navbar-nav .second {
+    position: absolute;
+    min-width: 19rem;
+    background-color: #eee;
+    top: calc(100% + 5px);
+    left: -1.7rem;
+
+    -webkit-transition: all .4s cubic-bezier(0, 0, 0.18, 1.11);
+    -moz-transition: all .4s cubic-bezier(0, 0, 0.18, 1.11);
+    -o-transition: all .4s cubic-bezier(0, 0, 0.18, 1.11);
+    -ms-transition: all .4s cubic-bezier(0, 0, 0.18, 1.11);
+    transition: all .4s cubic-bezier(0, 0, 0.18, 1.11);
+    
+    opacity: 0;
+    height: 0px;
+    overflow: hidden;
+    visibility: hidden;
+
+    .inner {
+        padding: 2rem calc(1.7rem + 21px);
+        border-top: 1px solid #6d8ae0;
+
+        ul {
+            padding-left: 0px;
+
+            li {
+                list-style: none;
+
+                &:not(:last-child) {
+                    margin-bottom: 8px;
                 }
             }
         }

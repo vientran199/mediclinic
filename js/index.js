@@ -15,6 +15,14 @@ for (let i = 0; i < liNav.length; i++) {
         const left = acc + padding
         lineBottom.style.left = `${left}px`
         lineBottom.style.width = `${liNav[i].clientWidth - 2 * padding}px`
+
+        const second = liNav[i].querySelector('.second')
+        console.log(second.querySelector('.inner').clientHeight)
+        second.style.height = `${second.querySelector('.inner').clientHeight}px`
+    })
+
+    liNav[i].addEventListener('mouseout', () => {
+        liNav[i].querySelector('.second').style.height = '0px'
     })
 }
 

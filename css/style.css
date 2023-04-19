@@ -69,9 +69,13 @@ header {
       header .header-bottom nav li.nav-item {
         margin: 0px;
         border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent; }
+        border-bottom: 5px solid transparent;
+        position: relative; }
+        header .header-bottom nav li.nav-item:hover .second {
+          opacity: 1;
+          visibility: visible; }
       header .header-bottom nav li a {
-        padding-left: 21px  !important;
+        padding-left: 21px !important;
         padding-right: 21px !important; }
     header .header-bottom--actions button {
       border: none;
@@ -91,3 +95,28 @@ header {
         font-size: 11px;
         line-height: 14px;
         padding: 0 4px; }
+
+.navbar-nav .second {
+  position: absolute;
+  min-width: 19rem;
+  background-color: #eee;
+  top: calc(100% + 5px);
+  left: -1.7rem;
+  -webkit-transition: all 0.4s cubic-bezier(0, 0, 0.18, 1.11);
+  -moz-transition: all 0.4s cubic-bezier(0, 0, 0.18, 1.11);
+  -o-transition: all 0.4s cubic-bezier(0, 0, 0.18, 1.11);
+  -ms-transition: all 0.4s cubic-bezier(0, 0, 0.18, 1.11);
+  transition: all 0.4s cubic-bezier(0, 0, 0.18, 1.11);
+  opacity: 0;
+  height: 0px;
+  overflow: hidden;
+  visibility: hidden; }
+  .navbar-nav .second .inner {
+    padding: 2rem calc(1.7rem + 21px);
+    border-top: 1px solid #6d8ae0; }
+    .navbar-nav .second .inner ul {
+      padding-left: 0px; }
+      .navbar-nav .second .inner ul li {
+        list-style: none; }
+        .navbar-nav .second .inner ul li:not(:last-child) {
+          margin-bottom: 8px; }
